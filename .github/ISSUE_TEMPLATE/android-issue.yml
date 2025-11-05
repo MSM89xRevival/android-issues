@@ -1,228 +1,84 @@
-body:
-- attributes:
-    value: 'What not to report:
-
-      - Bugs in unofficial builds or anything not downloaded from our [Official Website](https://get.pixelexperience.org/)
-
-      - Missing Builds
-
-      - Problems with the website
-
-      - Feature requests
-
-
-      Make sure not to use extra mods when reporting a problem (for example: Magisk)
-
-      If you need help please check our Telegram group at https://t.me/pixelexperiencechat
-
-      '
-  type: markdown
-- attributes:
-    description: 'Anything that can help us identify the build you are using
-
-      Example: ```PixelExperience_raphael-10.0-20201218-0409-OFFICIAL```
-
-      '
-    label: Build Date
-  type: input
-  validations:
-    required: true
-- attributes:
-    label: Device
-    multiple: false
-    options:
-    - Select one
-    - DRG
-    - NB1
-    - PL2
-    - RM6785
-    - RMX1851
-    - RMX1971
-    - RMX2061
-    - Spacewar
-    - TP1803
-    - X00TD
-    - X01AD
-    - X01BD
-    - a52q
-    - a52sxq
-    - a72q
-    - a73xq
-    - albus
-    - ali
-    - alioth
-    - andromeda
-    - apollo
-    - aura
-    - avicii
-    - barbet
-    - beckham
-    - begonia
-    - berlin
-    - beryllium
-    - beyond0lte
-    - beyond1lte
-    - beyond2lte
-    - beyondx
-    - blueline
-    - bonito
-    - bramble
-    - capricorn
-    - cepheus
-    - cheeseburger
-    - chef
-    - chiron
-    - citrus
-    - clover
-    - coral
-    - crosshatch
-    - crownlte
-    - d1
-    - d2s
-    - d2x
-    - davinci
-    - dipper
-    - dre
-    - dubai
-    - dumpling
-    - enchilada
-    - evert
-    - fajita
-    - flame
-    - fog
-    - gauguin
-    - gemini
-    - ginkgo
-    - guacamole
-    - guacamoleb
-    - haydn
-    - hero2lte
-    - herolte
-    - hotdog
-    - hotdogb
-    - instantnoodle
-    - instantnoodlep
-    - jasmine_sprout
-    - jd2019
-    - kane
-    - kebab
-    - kunlun2
-    - kunlun2_row
-    - lake
-    - land
-    - laurel_sprout
-    - lava
-    - lavender
-    - liber
-    - lime
-    - lisa
-    - lithium
-    - lmi
-    - m52xq
-    - marlin
-    - mars
-    - martini
-    - merlinx
-    - mi439
-    - miatoll
-    - mido
-    - mojito
-    - monet
-    - munch
-    - natrium
-    - nio
-    - ocean
-    - oneplus3
-    - oxygen
-    - parker
-    - payton
-    - phoenix
-    - picasso
-    - picasso_48m
-    - pine
-    - platina
-    - polaris
-    - potter
-    - r2p
-    - r5x
-    - raphael
-    - redfin
-    - redwood
-    - renoir
-    - river
-    - rosemary
-    - rosy
-    - sailfish
-    - sakura
-    - sanders
-    - sargo
-    - scorpio
-    - sirius
-    - spes
-    - star2lte
-    - starlte
-    - sunfish
-    - surya
-    - sweet
-    - taimen
-    - thyme
-    - tissot
-    - troika
-    - tucana
-    - tulip
-    - v7101o
-    - vangogh
-    - vayu
-    - venus
-    - veux
-    - vince
-    - violet
-    - walleye
-    - whyred
-    - zippo
-  type: dropdown
-  validations:
-    required: true
-- attributes:
-    label: Version
-    multiple: false
-    options:
-    - Select one
-    - fourteen
-  type: dropdown
-  validations:
-    required: true
-- attributes:
-    description: A clear and concise description of what the bug is.
-    label: Describe the Bug
-  type: textarea
-  validations:
-    required: true
-- attributes:
-    description: Steps to reproduce the behavior, please provide a clear description
-      of how to reproduce the issue, based on the linked minimal reproduction. Screenshots
-      can be provided in the issue body below. If using code blocks, make sure that
-      [syntax highlighting is correct](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting)
-      and double check that the rendered preview is not broken.
-    label: Steps to Reproduce
-  type: textarea
-  validations:
-    required: true
-- attributes:
-    description: A clear and concise description of what you expected to happen.
-    label: Expected Behavior
-  type: textarea
-  validations:
-    required: true
-- attributes:
-    description: Not obligatory, but suggest a fix/reason for the bug
-    label: Possible Solution
-  type: textarea
-  validations:
-    required: false
-- attributes:
-    value: Before posting the issue go through the steps you've written down to make
-      sure the steps provided are detailed and clear.
-  type: markdown
-description: Create a bug report
 name: Bug Report
+description: Create a bug report
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What not to report:
+
+        - Errors in anything other than the org's device tree
+        - Missing Builds
+        - Feature requests
+
+        Be sure to mention that you are using additional mods when reporting a problem (for example: Magisk)
+
+        If you need help, contact me on Telegram at https://t.me/Vhmit
+
+  - type: input
+    attributes:
+      label: Build Date
+      description: |
+        Anything that can help us identify the build you are using  
+        Example: `lineage-18.1-20240222-UNOFFICIAL-deen`
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Device
+      multiple: false
+      options:
+        - Select one
+        - deen
+        - jeter
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Version
+      multiple: false
+      options:
+        - Select one
+        - Q (10)
+        - R (11)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Steps to reproduce the behavior. Screenshots can be provided in the issue body below.
+        If using code blocks, make sure that [syntax highlighting is correct](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting)
+        and double check that the rendered preview is not broken.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Possible Solution
+      description: Not obligatory, but suggest a fix/reason for the bug.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Before posting the issue, go through the steps you've written down to make sure
+        the steps provided are detailed and clear.
